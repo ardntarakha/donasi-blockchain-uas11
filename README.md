@@ -62,13 +62,8 @@ Salin kode
    cd -2web
 Install dependency:
 
-bash
-Salin kode
-npm install
-Jalankan aplikasi:
-
-bash
-Salin kode
+```bash
+npm instal
 npm run dev
 Buka browser:
 
