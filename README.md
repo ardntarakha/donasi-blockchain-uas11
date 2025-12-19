@@ -60,12 +60,9 @@ Salin kode
 1. Masuk ke folder frontend:
    ```bash
    cd -2web
+   npm instal
+   npm run dev
 Install dependency:
-
-```bash
-npm instal
-npm run dev
-Buka browser:
 
 arduino
 Salin kode
