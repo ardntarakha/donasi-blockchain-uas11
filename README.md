@@ -59,7 +59,7 @@ Salin kode
 
 1. Masuk ke folder frontend:
    ```bash
-   cd web
+   cd -2web
 Install dependency:
 
 bash
