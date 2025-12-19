@@ -1,0 +1,439 @@
+:root{
+  /* DARK MODE GLOBAL */
+  --bg: #070A12;
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.65);
+  --line: rgba(255,255,255,.12);
+  --soft: rgba(255,255,255,.08);
+  --card: rgba(255,255,255,.06);
+
+  --green: #46d46a;
+  --green-dark:#18b74a;
+  --danger:#ff4b5c;
+
+  --shadow: 0 18px 50px rgba(0,0,0,.45);
+  --radius: 16px;
+
+  /* KHUSUS BOX TEKNOLOGI (PUTIH + TEXT HITAM) */
+  --tech-bg: #ffffff;
+  --tech-text: #111;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: system-ui, Segoe UI, Roboto, Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a{ color:inherit; text-decoration:none; }
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 18px;
+}
+
+.section{ padding:42px 0; }
+
+hr{
+  border:none;
+  border-top:1px solid var(--line);
+  margin:0;
+}
+
+.mono{ font-family: ui-monospace, Consolas, monospace; }
+
+/* ==============================
+   NAVBAR
+   ============================== */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background: rgba(7,10,18,.72);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--line);
+}
+
+.navContainer{
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+.navInner{
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.navLeft{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brandMark{
+  width:42px;
+  height:42px;
+  border-radius: 14px;
+  display:grid;
+  place-items:center;
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  box-shadow: var(--shadow);
+}
+
+.titleWrap{
+  display:flex;
+  flex-direction:column;
+  line-height:1.2;
+}
+
+.titleMain{
+  font-size:16px;
+  font-weight:900;
+  letter-spacing: -0.02em;
+}
+
+.titleSub{
+  font-size:12px;
+  color: var(--muted);
+}
+
+.navRight{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.navLink{
+  font-size:14px;
+  font-weight:750;
+  position:relative;
+  padding:8px 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  color: rgba(255,255,255,.82);
+}
+
+.navLink:hover{
+  background: var(--soft);
+  border-color: var(--line);
+  color: rgba(255,255,255,.92);
+}
+
+.navLink.active{
+  color: rgba(255,255,255,.95);
+  background: var(--soft);
+  border-color: var(--line);
+}
+
+.navAdmin{
+  padding:8px 14px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.06);
+}
+
+/* ==============================
+   BUTTON & BADGE
+   ============================== */
+.btn{
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.06);
+  padding:10px 16px;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:850;
+  transition:.15s;
+  color: rgba(255,255,255,.92);
+}
+
+.btn:hover{
+  background: rgba(255,255,255,.10);
+  transform: translateY(-1px);
+}
+
+.btn:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+  transform:none;
+}
+
+.btnDonate{
+  border:none;
+  background: linear-gradient(135deg, var(--danger), #ff7a86);
+  color:#07111a;
+}
+
+.badge{
+  font-family: ui-monospace, Consolas, monospace;
+  font-size:12px;
+  padding:7px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background: rgba(255,255,255,.06);
+}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.08);
+  font-weight: 850;
+  font-size: 12px;
+}
+
+/* ==============================
+   HERO SECTION
+   ============================== */
+.hero{
+  display:grid;
+  grid-template-columns:1.35fr 1fr;
+  min-height:440px;
+  border-bottom:1px solid var(--line);
+}
+
+.heroImg{ overflow:hidden; background: #000; }
+.heroImg img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+.heroPanel{
+  background:
+    radial-gradient(900px 600px at 20% 0%, rgba(70,212,106,.20), transparent 60%),
+    radial-gradient(900px 600px at 100% 10%, rgba(255,75,92,.16), transparent 55%),
+    linear-gradient(135deg, rgba(7,10,18,.85), rgba(7,10,18,.70));
+  color: var(--text);
+  padding:32px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.heroTitle{
+  margin:0;
+  font-size:36px;
+  font-weight:950;
+  letter-spacing: -0.02em;
+}
+
+.heroSub{
+  margin:0;
+  font-size:15px;
+  line-height:1.7;
+  color: rgba(255,255,255,.74);
+}
+
+.box{
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius);
+  padding:18px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+/* ==============================
+   STATS & PROGRESS (shimmer)
+   ============================== */
+.statsRow{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.small{
+  font-size:12px;
+  color: rgba(255,255,255,.72);
+  line-height:1.6;
+}
+
+.smallDark{
+  font-size:12px;
+  color: var(--muted);
+}
+
+.row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.progress{
+  height:10px;
+  background: rgba(255,255,255,.12);
+  border-radius:999px;
+  overflow:hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  position: relative;
+}
+
+.progress > div{
+  height:100%;
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  width:0%;
+  transition: width .65s cubic-bezier(.2,.9,.2,1);
+  position: relative;
+}
+
+.progress > div::after{
+  content:"";
+  position:absolute;
+  top:0; bottom:0;
+  width: 120px;
+  left:-140px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+@keyframes shimmer{
+  0%{ transform: translateX(0); }
+  100%{ transform: translateX(420px); }
+}
+
+/* ==============================
+   FORM + QUICK AMOUNT
+   ============================== */
+.label{
+  font-size:12px;
+  margin:14px 0 6px;
+  color: rgba(255,255,255,.72);
+}
+
+.input{
+  width:100%;
+  border:1px solid rgba(255,255,255,.14);
+  outline:none;
+  padding:11px 12px;
+  border-radius:12px;
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.92);
+}
+
+.input:focus{
+  border-color: rgba(70,212,106,.55);
+  box-shadow: 0 0 0 4px rgba(70,212,106,.16);
+}
+
+.quickRow{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top: 10px;
+}
+
+.quickBtn{
+  border:1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.08);
+  color: rgba(255,255,255,.92);
+  padding:8px 10px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight: 850;
+  font-size: 12px;
+}
+.quickBtn:hover{ filter: brightness(1.05); }
+
+/* ==============================
+   TECH BOX (PUTIH + HITAM)
+   ============================== */
+.techBox{
+  background: var(--tech-bg);
+  color: var(--tech-text);
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: var(--shadow);
+}
+
+.techBox h3{
+  margin-top: 0;
+  margin-bottom: 14px;
+  color: var(--tech-text);
+}
+
+.techBox ul{
+  padding-left: 18px;
+  margin: 0;
+}
+
+.techBox li{
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: var(--tech-text);
+}
+
+/* ==============================
+   CARD SECTION
+   ============================== */
+.cards3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.card{
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;
+  padding:18px;
+  background: rgba(255,255,255,.06);
+  text-align:center;
+  box-shadow: 0 12px 28px rgba(0,0,0,.25);
+}
+
+.icon{
+  width:60px;
+  height:60px;
+  border-radius:999px;
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  color:#07111a;
+  display:grid;
+  place-items:center;
+  margin:0 auto 12px;
+  font-size:26px;
+  box-shadow: var(--shadow);
+}
+
+.card b{ font-size:14px; }
+.card p{
+  margin:8px 0 0;
+  color: rgba(255,255,255,.70);
+  line-height:1.55;
+  font-size:13px;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+.footer{
+  background: linear-gradient(135deg, rgba(70,212,106,.85), rgba(24,183,74,.85));
+  color:#07111a;
+  padding:26px 0;
+  margin-top:24px;
+}
+
+.footer .small{
+  color: rgba(7,17,26,.78);
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+@media (max-width: 920px){
+  .hero{ grid-template-columns:1fr; }
+  .cards3{ grid-template-columns:1fr; }
+  .navRight{ gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+}
